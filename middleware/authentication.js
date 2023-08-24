@@ -19,7 +19,6 @@ const auth = async (req, res, next) => {
       name: payload.name,
       testUser: payload.userId === "64e5e587d1dc6757c73ff07b",
     };
-    console.log(req.user);
 
     next();
   } catch (error) {

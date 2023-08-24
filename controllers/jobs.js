@@ -204,7 +204,6 @@ const getStats = async (req, res) => {
         },
     },
   ]);
-  console.log(timeCount);
 
   res.status(StatusCodes.OK).json({
     defaultStats,
