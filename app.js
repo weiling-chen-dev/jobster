@@ -31,6 +31,10 @@ app.use(xss());
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/jobs", authenticateUser, jobsRouter);
 
+app.get("/landing", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+});
+
 app.get("*", (res, req) => {
   res.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
 });
